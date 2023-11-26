@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body,
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root {
+  height: 100%;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.drawing-root-wrapper {
+  /* height: 100%; */
+  /* width: 100%; */
+}
+
+
+
+
+/* TOOL bar style goes here */
+.toolbar-wrapper{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+  min-width: 100px;
+  min-height: 30px;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 4px;
+  background-color: red;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.tool{
+  width: 20px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.active {
+  background-color: blue;
+  border-radius: 5px;
 }
