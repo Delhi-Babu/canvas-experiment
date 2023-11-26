@@ -42,8 +42,9 @@ export class MouseHandlerService {
     const { startPosition } = drawingElement;
     if (drawingElement.type !== EShapeType.NONE) {
       const endPosition = { x: e.clientX, y: e.clientY };
-      const width = Math.abs(startPosition.x - endPosition.x);
-      const height = Math.abs(startPosition.y - endPosition.y);
+
+      const width = endPosition.x - startPosition.x;
+      const height = endPosition.y - startPosition.y;
 
       switch (activeTool) {
         case ETools.SQUARE:
